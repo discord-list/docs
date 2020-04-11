@@ -1,0 +1,41 @@
+---
+name: User
+menu: Recursos
+route: /resources/user
+---
+
+import Table from '../components/Table'
+import './methods.css'
+
+# User
+
+## User Object
+
+<Table title="Estrutura do User" params={[
+  ["id", "String", "Id do usuário"],
+  ["username", "String", "Nome do usuário"],
+  ["discriminator", "String", "Discriminador do usuário"],
+  ["avatar", "String", "URL do avatar do usuário"],
+  ["status", "String", "Status do usuário"],
+  ["streaming", "Boolean", "Se o usuário está transmitindo"],
+  ["customstatus?", "Object", "Status customizado do usuário no Discord"],
+  ["customstatus.text", "String", "Texto do status customizado"],
+  ["customstatus.emoji?", "Object", "Emoji do status customizado"],
+  ["customstatus.emoji.name", "String", "Nome do emoji do status customizado"],
+  ["customstatus.emoji.id?", "String", "Id do emoji do status customizado"],
+  ["customstatus.emoji.url?", "String", "URL do emoji do status customizado"],
+  
+  ["bots", "Array de bots", "Bots do usuário"],
+  ["verificador", "Boolean", "Se o usuário é verificador de bots na Discord List"]
+]} />
+
+## Obter Informações de um user
+<strong>
+  <span className="get">GET</span> /user
+</strong>
+
+<Table title="Query" params={[
+  ["user", "String", "Id do usuário"]
+]} />
+
+<strong className="get">Return</strong> <a href="#user-object">User Object</a>

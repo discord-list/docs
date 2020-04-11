@@ -1,0 +1,48 @@
+---
+name: Bot
+menu: Recursos
+route: /resources/bot
+---
+
+import Table from '../components/Table'
+import './methods.css'
+
+# Bot
+
+## Bot Object
+
+<Table title="Estrutura do Bot" params={[
+  ["id", "String", "Id do bot"],
+  ["username", "String", "Nome do bot"],
+  ["discriminator", "String", "Discriminador do bot"],
+  ["avatar", "String", "URL do avatar do bot"],
+  ["status", "String", "Status do bot"],
+  ["streaming", "Boolean", "Se o bot está transmitindo"],
+  
+  ["list", "Boolean", "Se o bot está listado"],
+  ["owner", "String", "Id do dono do bot"],
+  ["votes", "Number", "Número de votos do bot"],
+  ["prefix", "String", "Prefixo do bot"],
+  ["bibl", "String", "Biblioteca do bot"],
+  ["shortDescription", "String", "Descrição curta do bot"],
+  ["description", "String", "Descrição do bot"],
+  ["tags", "Array de Strings", "Tags do bot"],
+  ["invite?", "String", "Convite personalizado para adicionar o bot"],
+  ["website?", "String", "WebSite do bot"],
+  ["github?", "String", "GitHub do bot"],
+  ["server?", "String", "Convite para o servidor de suporte do bot"]
+]} />
+
+## Obter Informações de um bot
+<strong>
+  <span className="get">GET</span> /bot/:id
+</strong>
+<br />
+<strong className="get">Return</strong> <a href="#bot-object">Bot Object</a>
+
+## Obter bots listados
+<strong>
+  <span className="get">GET</span> /bots
+</strong>
+<br />
+<strong className="get">Return</strong> Um Array de <a href="#bot-object">Bot Objects</a>

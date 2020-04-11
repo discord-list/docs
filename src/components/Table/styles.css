@@ -1,0 +1,44 @@
+table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  cursor: default;
+}
+
+table theader {
+  background-color: #4F545C;
+  border-radius: 4px 4px 0 0;
+  padding: 4px 10px;
+  flex: 1;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+table tbody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+table tbody tr {
+  display: flex;
+  flex: 1;
+  background: #222428;
+  color: rgba(255, 255, 255, 0.6);
+  align-items: center;
+}
+
+table tbody tr:nth-child(1) {
+  color: white;
+}
+
+table tbody tr:nth-child(even) {
+  background: #424548;
+}
+
+table tbody tr td {
+  flex: 1;
+  padding: 6px 18px;
+  font-size: 0.8em;
+}
